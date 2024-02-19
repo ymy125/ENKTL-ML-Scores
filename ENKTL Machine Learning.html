@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<!-- saved from url=(0059)https://highcloud.shinyapps.io/ENKTL_ML_Score_Introduction/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<!--<base href="_w_6757b55f/">--><base href=".">
+    <script type="text/javascript">
+(function() {
+  var workerId = '_w_6757b55f';
+  // remove base href if worker ID is in url
+  if (window.location.href.indexOf(workerId) > 0) {
+    document.querySelector('base').removeAttribute('href');
+  }
+})();
+</script>
+
+      <script type="text/javascript">
+      var __connect = {
+        shinyPre101: false
+      }
+      </script>
+      
+  
+  <script type="application/shiny-singletons"></script>
+  <script type="application/html-dependencies">jquery[3.6.0];shiny-css[1.7.5.1];shiny-javascript[1.7.5.1];bootstrap[3.4.1]</script>
+<script src="./ENKTL Machine Learning Scores_files/jquery.min.js.下载"></script>
+<link href="./ENKTL Machine Learning Scores_files/shiny.min.css" rel="stylesheet">
+<script src="./ENKTL Machine Learning Scores_files/shiny.min.js.下载"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="./ENKTL Machine Learning Scores_files/bootstrap.min.css" rel="stylesheet">
+<link href="./ENKTL Machine Learning Scores_files/bootstrap-accessibility.min.css" rel="stylesheet">
+<script src="./ENKTL Machine Learning Scores_files/bootstrap.min.js.下载"></script>
+<script src="./ENKTL Machine Learning Scores_files/bootstrap-accessibility.min.js.下载"></script>  <title>ENKTL Machine Learning Scores</title>
+<script src="./ENKTL Machine Learning Scores_files/sockjs.min.js.下载"></script>
+<script src="./ENKTL Machine Learning Scores_files/shiny-server-client.min.js.下载"></script>
+<script>preShinyInit({reconnect:true,reconnectTimeout:15000,disableProtocols:["htmlfile","xdr-streaming","xdr-polling","websocket"],token:true,workerId:true,subappTag:true,extendSession:true,fixupInternalLinks:true});</script>
+<link rel="stylesheet" type="text/css" href="./ENKTL Machine Learning Scores_files/rstudio-connect.css">
+<link rel="stylesheet" type="text/css" href="./ENKTL Machine Learning Scores_files/shinyapps.css"></head>
+<body data-new-gr-c-s-check-loaded="14.1155.0" data-gr-ext-installed="" class="">
+<script type="text/javascript" src="./ENKTL Machine Learning Scores_files/iframeResizer.contentWindow.min.js.下载"></script>
+<script type="text/javascript" src="./ENKTL Machine Learning Scores_files/shinyapps.frame.content.js.下载"></script>
+<script type="text/javascript" src="./ENKTL Machine Learning Scores_files/shinyapps.js.下载"></script>
+  <div class="container-fluid">
+    <h2>ENKTL Machine Learning Scores</h2>
+    <div class="row">
+      <div class="col-sm-12">
+        <h4>Shuo Li, Li-Min Gao, Yu-Jia Zhong, Yin-Li Zheng, Li-Yan Wu, Xuan-Kai Zeng, Yan-Fen Feng, Ying-Chun Zhang, Sheng-Bing Zang, Yan Li, Huang-Ming Hong, Jing-Ping Yun, Yu-Hua </h4>
+      </div>
+      <div class="col-sm-12">
+        <h4>2024-02-20</h4>
+        <p>
+          To access the online calculator, please go to
+          <a href="https://highcloud.shinyapps.io/ENKTL_ML_Scores/">ENKTL Machine Learning Scores</a>.
+        </p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-12">
+        <p>
+          If you prefer offline use, you can download all the necessary files from
+          <a href="https://github.com/ymy125/ENKTL-ML-Scores">https://github.com/ymy125/ENKTL-ML-Scores</a>.
+          Simply click on “Code” and then select “Download ZIP”.
+        </p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-12">
+        <img src="./ENKTL Machine Learning Scores_files/2.jpg" width="500px">
+        <p>After downloading the files, you can place them in the same directory on your local computer. From there, you can execute the following R codes if you have R installed. Alternatively, you have the option to fork the entire repository to your GitHub account. The R codes have been successfully tested in R versions 4.3.0.</p>
+        <h2>Required R packages</h2>
+        <ul>
+          <li>caret (v6.0-94) and its dependencies</li>
+          <li>gbm (v1.2.8.1.1)</li>
+        </ul>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="code-block">
+          <pre>            <code>
+# Uncomment and install R packages 'caret' (v6.0-94) and 'gbm' (v2.8.1.1) for first time usage
+# devtools::install_version('caret', version = '6.0-92', repos = 'http://cran.us.r-project.org')
+# devtools::install_version('gbm', version = '2.8.1.1', repos = 'http://cran.us.r-project.org')
+            </code>
+          </pre>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-12">
+        <h2>ENKTL Machine Learning Scores</h2>
+        <p>The following code snippet provides the calculation for the ENKTL Machine Learning Score of an individual patient.</p>
+        <div class="code-block">
+          <pre>            <code>
+# Input the clinical data of a single patient as follows
+#Gender
+Gender = Female
+#Age (years)
+Age = 41
+#ECOG performance status
+ECOG performance status = 0
+#B symptoms
+B symptoms = 0
+#Ann Arbor staging
+Ann Arbor staging = 1
+#Primary tumor invasion (PTI)
+Primary tumor invasion (PTI) = 0
+#Primary site
+Primary site = 0
+#Regional lymph node involvement
+Regional lymph node involvement = 0
+#Extranodal sites
+Extranodal sites= 0
+#Distant lymph node involvement
+Distant lymph node involvement = 0
+#Ki67 proliferative index
+Ki67 proliferative index = 0
+#EBV-DNA copy number (copies/ml)
+EBV-DNA copy number  =30
+#LDH (U/L)
+LDH = 197.6
+# Form a data frame
+pt1 = data.frame(
+  'Gender'=Gender, 'Age'=Age, 'ECOG'=ECOG, 
+  'Bsymptoms'=Bsymptoms, 'Arbor'=Arbor, 'PTI'=PTI, 
+  'UADT'=UADT, 'RegionalLN'=RegionalLN, 'Extranodal'=Extranodal,
+  'DistantLN'=DistantLN, 'EBV_DNA'=EBV_DNA, 'Ki67'=Ki67, 'LDH'=LDH)
+  
+# Load necessary R package
+library(caret)</code>
+          </pre>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="code-block">
+          <pre>            <code>
+## Loading required package: ggplot2
+            </code>
+          </pre>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="code-block">
+          <pre>            <code>
+## Loading required package: lattice
+            </code>
+          </pre>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="code-block">
+          <pre>            <code>
+# Calculate ENKTL Machine Learning Score
+gbm = readRDS('gbm_model.rds')
+score = round(predict(gbm, pt1, type='fit')$yes, 3)
+
+paste('The ENKTL Machine Learning Score is', score)
+            </code>
+          </pre>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="code-block">
+          <pre>            <code>
+## [1] 'ENKTL Machine Learning Score is -1.612'</code>
+          </pre>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-12">
+        <p>The following code snippet provides the calculation for the ENKTL Machine Learning Score of a group of patients.</p>
+        <div class="code-block">
+          <pre>            <code>
+# Remark: The data set should contain 9 necessary columns:
+# sex,Age,ECOG,Bsymptoms,Arbor,PTI,UADT,RegionalLN,Extranodal,DistantLN,EBV_DNA,Ki67,LDH
+# Please refer to above on the units and the coding of the categories
+
+# Read in the cohort of patients in csv format
+pts &lt;- read.csv('SYSU_10_08_lgl_coxboost with SCORE.csv')
+
+# Load necessary R package
+library(caret)
+
+# Calculate the ENKTL Machine Learning Score
+gbm = readRDS('gbm_model.rds')
+scores = round(predict(gbm, pts, type='prob')$yes, 3)
+
+head(cbind(pts, scores), 6)
+                 </code>
+          </pre>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-12">
+        <p>The following code snippet provides the calculation for the ENKTL Machine Learning Score of a group of patients.</p>
+        <div class="code-block">
+          <pre>            <code>
+	sex	Age	ECOG	Bsymptoms Arbor	PTI	UADT	RegionalLN	Extranodal	DistantLN	EBV_DNA	 Ki67	LDH	      scores
+1	1	 41	 0	      0	    1	 0	 0	      0	          0	          0	          0	   30	 197.6	      -1.612
+2	1	 36	 0	      0	    1	 0	 0	      0	          0	          0	          0	   50	 229.7	      -1.634
+3	1	 58	 1	      0	    1	 0	 0	      0	          0	          0	          0	   30	 167	      -1.494
+4	0	 64	 1	      0	    2	 1	 0	      0	          0	          0	          0	   70	 256.9        -1.324
+5	1	 36	 0	      0	    1	 0	 0	      0	          0	          0	          75.5     10	 143	      -1.561
+6	1	 35	 0	      1	    2	 1	 0	      1	          0	          0	          355	   60	 382	      -1.324
+                 </code>
+          </pre>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+<div id="ss-connect-dialog" style="display: none;"><label>Attempting to reconnect...</label><label>&nbsp;</label></div><div id="ss-overlay" class="ss-gray-out" style="display: none;"></div></body><grammarly-desktop-integration data-grammarly-shadow-root="true"><template shadowrootmode="open"><style>
+      div.grammarly-desktop-integration {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border: 0;
+        -moz-user-select: none;
+        -webkit-user-select: none;
+        -ms-user-select:none;
+        user-select:none;
+      }
+
+      div.grammarly-desktop-integration:before {
+        content: attr(data-content);
+      }
+    </style><div aria-label="grammarly-integration" role="group" tabindex="-1" class="grammarly-desktop-integration" data-content="{&quot;mode&quot;:&quot;full&quot;,&quot;isActive&quot;:true,&quot;isUserDisabled&quot;:false}"></div></template></grammarly-desktop-integration></html>
