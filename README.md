@@ -1,8 +1,9 @@
-# ENKTL Machine Learning Scores
-This repo offers a comprehensive guide on utilizing the ENKTL Machine Learning Score developed by Shuo Li, Li-Min Gao and our colleagues and collaborators. This GitHub Page[ https://tcfyip.github.io/SMART-HCC-score/](https://github.com/ymy125/ENKTL-ML-Scores) provides step-by-step instructions on how to calculate the SMART HCC score for both individual patients and a group of patients.
+# ENKTL ML Score
 
-If you prefer using the online calculator, you can access it directly at [https://tcfyip.shinyapps.io/smart_hcc_score/](https://highcloud.shinyapps.io/ENKTL_ML_Scores/).
+This repository serves as a comprehensive guide for utilizing the ENKTL ML Score developed by Shuo Li, Li-Min Gao, and collaborators. Visit the GitHub Page https:XXX for step-by-step instructions on calculating the score for individual patients or a patient group.
 
-For any inquiries or further assistance, please don't hesitate to contact Yu-Hua Huang at huangyh@sysucc.org.cn.
+Access the online calculator directly at https://highcloud.shinyapps.io/ENKTL_ML_Scores/, if you prefer using the online tool. 
 
-We appreciate your interest in the ENKTL Machine Learning Scores!
+For inquiries or assistance, please don’t hesitate to contact Yu-hua Huang at huangyh@sysucc.org.cn. 
+
+Your interest in the ENKTL ML Score is greatly appreciated!
